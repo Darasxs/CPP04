@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:26:52 by dpaluszk          #+#    #+#             */
-/*   Updated: 2025/02/24 17:13:31 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/03 10:45:32 by daras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ Animal &Animal::operator=(const Animal &animal)
 	if (this != &animal)
 		this->type = animal.type;
 	std::cout << "Copy assignment operator for Animal called." << std::endl;
+	return (*this);
 }
 
 Animal::~Animal(void)
