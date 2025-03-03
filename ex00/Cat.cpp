@@ -6,7 +6,7 @@
 /*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:13:17 by dpaluszk          #+#    #+#             */
-/*   Updated: 2025/03/03 11:11:24 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/03 11:24:53 by daras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,14 @@ Cat &Cat::operator=(const Cat &cat)
         Animal::operator=(cat);
     std::cout << "Copy assignment operator for Cat called." << std::endl;
     return (*this);
+}
+
+Cat::~Cat(void)
+{
+    std::cout << "Destructor for Cat called." << std::endl;
+}
+
+void Cat::makeSound(void) const
+{
+    std::cout << "Meow!" << std::endl;
 }
