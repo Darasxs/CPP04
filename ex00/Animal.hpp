@@ -11,6 +11,7 @@ class Animal
 	Animal(const Animal &animal);
 	Animal &operator=(const Animal &animal);
 	virtual ~Animal(void);
+	
 	std::string getType(void) const;
 	virtual void makeSound(void) const;
 
