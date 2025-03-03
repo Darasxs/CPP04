@@ -6,19 +6,22 @@
 /*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:26:36 by dpaluszk          #+#    #+#             */
-/*   Updated: 2025/03/03 10:39:41 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/03 11:35:22 by daras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
+#include "Cat.hpp"
+
 int	main(void)
 {
-	// const Animal *meta = new Animal();
+	const Animal *meta = new Animal();
 	// const Animal *j = new Dog();
-	// const Animal *i = new Cat();
+	const Animal *i = new Cat();
 	// std::cout << j->getType() << " " << std::endl;
 	// std::cout << i->getType() << " " << std::endl;
-	// i->makeSound(); // will output the cat sound!
+	i->makeSound(); // will output the cat sound!
 	// j->makeSound();
-	// meta->makeSound();
+	meta->makeSound();
 	return (0);
 }
