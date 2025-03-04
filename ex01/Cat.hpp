@@ -12,6 +12,9 @@ class Cat : public Animal
 	~Cat(void);
 
 	void makeSound(void) const override;
+
+  private:
+	Brain* brain;
 };
 
 #endif
