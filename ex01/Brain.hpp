@@ -11,7 +11,7 @@ class Brain
         Brain& operator=(const Brain &other);
         ~Brain(void);
 
-        void    newIdea(std::string &idea);
+        void    newIdea(std::string idea);
         void    printIdeas(void);
 
     private:

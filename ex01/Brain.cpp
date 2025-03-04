@@ -6,7 +6,7 @@
 /*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 09:21:01 by daras             #+#    #+#             */
-/*   Updated: 2025/03/04 11:27:24 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/04 16:35:20 by daras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Brain::~Brain(void)
     std::cout << "Brain destructor called" << std::endl;
 }
 
-void Brain::newIdea(std::string &idea)
+void Brain::newIdea(std::string idea)
 {
     for (int i = 0; i < 100; i++)
     {

@@ -6,7 +6,7 @@
 /*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:26:36 by dpaluszk          #+#    #+#             */
-/*   Updated: 2025/03/04 11:43:18 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/04 16:54:46 by daras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,26 @@ int	main(void)
 		delete animals[i];
 	std::cout << std::endl;
 	
+	const Cat* Marcin = new Cat();
+	const Dog* Kazik = new Dog();
+	std::cout << std::endl;
+
+	std::cout << "The brains should be empty at this point: " << std::endl;
+	Kazik->getBrain()->printIdeas();
+	Marcin->getBrain()->printIdeas();
+	std::cout << std::endl;
+	std::cout << "Now we will fill the brains with some ideas: " << std::endl;
+	Marcin->getBrain()->newIdea("I'm a cat.");
+	Marcin->getBrain()->newIdea("I'm hungry.");
+	Marcin->getBrain()->newIdea("I'm sleepy.");
+	Marcin->getBrain()->newIdea("I'm bored.");
+	Marcin->getBrain()->printIdeas();
+	std::cout << std::endl;
+	Kazik->getBrain()->newIdea("I'm a dog.");
+	Kazik->getBrain()->newIdea("I'm busy.");
+	Kazik->getBrain()->newIdea("I want to go for a walk.");
+	Kazik->getBrain()->newIdea("I'm thirsty.");
+	Kazik->getBrain()->printIdeas();
+	std::cout << std::endl;
 	return (0);
 }
