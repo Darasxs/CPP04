@@ -6,7 +6,7 @@
 /*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 09:21:01 by daras             #+#    #+#             */
-/*   Updated: 2025/03/04 10:49:56 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/04 11:27:24 by daras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Brain::Brain(void)
     std::cout << "Brain constructor called" << std::endl;
 }
 
-Brain::Brain(const BRain &other)
+Brain::Brain(const Brain &other)
 {
     std::cout << "Brain copy constructor called" << std::endl;
     *this = other;
@@ -39,7 +39,7 @@ Brain::~Brain(void)
     std::cout << "Brain destructor called" << std::endl;
 }
 
-Brain::newIdea(std::string &idea)
+void Brain::newIdea(std::string &idea)
 {
     for (int i = 0; i < 100; i++)
     {
@@ -52,16 +52,17 @@ Brain::newIdea(std::string &idea)
     std::cout << "Brain is full. No place left for a new idea." << std::endl;
 }
 
-Brain::printIdeas(void)
+void Brain::printIdeas(void)
 {
+    bool notEmpty = false;
     for(int i = 0; i < 100; i++)
     {
         if(!ideas[i].empty())
         {
             std::cout << "The idea number " << i + 1 << " is: " << ideas[i] << std::endl;
-            bool notEmpty = true;   
+            notEmpty = true;   
         }
     }
-    if notEmpty == false
+    if (notEmpty == false)
         std::cout << "Brain is empty. No ideas to print." << std::endl;
 }
