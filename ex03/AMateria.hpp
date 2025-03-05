@@ -7,7 +7,7 @@
 class AMateria
 {
     protected:
-        std::string _type;
+        std::string type;
     
     public:
         AMateria(void);
@@ -22,3 +22,6 @@ class AMateria
 };
 
 #endif
+
+// an abstract class (an interface) is a class that cannot be instantiated directly on its own, but must be a base class for other classes; it is degisned to be inherited by other classes
+// an abstract class is a class that has at least one pure virtual function
