@@ -20,5 +20,5 @@ class Animal
 };
 
 void	properAnimalCall(void);
-void	wrongAnimalCall(void);
+
 #endif

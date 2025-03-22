@@ -19,4 +19,6 @@ class WrongAnimal
 	std::string type;
 };
 
+void	wrongAnimalCall(void);
+
 #endif

@@ -6,11 +6,12 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:26:36 by dpaluszk          #+#    #+#             */
-/*   Updated: 2025/03/22 15:52:27 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 16:28:39 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 int	main(void)
 {
