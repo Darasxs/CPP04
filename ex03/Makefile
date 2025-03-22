@@ -6,9 +6,9 @@ CC = c++
 
 SRC =	main.cpp \
 		AMateria.cpp \
-		Character.cpp \
-		Cure.cpp \
 		Ice.cpp \
+		Cure.cpp \
+		Character.cpp \
 		MateriaSource.cpp
 
 OBJ = $(SRC:%.cpp=%.o)

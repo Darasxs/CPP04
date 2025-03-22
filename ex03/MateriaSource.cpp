@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 09:56:38 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 17:32:17 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 18:37:49 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,12 @@ MateriaSource::MateriaSource(MateriaSource const &copy)
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &copy)
 {
-				delete materias[i];
-
 	if (this != &copy)
 	{
 		for (int i = 0; i < 4; i++)
 		{
 			if (materias[i])
+				delete materias[i];
 			if (copy.materias[i])
 				materias[i] = copy.materias[i]->clone();
 			else
@@ -49,11 +48,10 @@ MateriaSource &MateriaSource::operator=(MateriaSource const &copy)
 
 MateriaSource::~MateriaSource(void)
 {
-			delete materias[i];
-
 	for (int i = 0; i < 4; i++)
 	{
 		if (materias[i])
+			delete materias[i];
 	}
 }
 

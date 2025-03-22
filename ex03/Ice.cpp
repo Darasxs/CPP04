@@ -6,11 +6,12 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 08:59:32 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 17:44:20 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 18:38:32 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include <iostream>
 
 Ice::Ice(void) : AMateria("ice") {}
 
@@ -30,7 +31,7 @@ AMateria *Ice::clone(void) const
 	return (new Ice(*this));
 }
 
-void	use(ICharacter &target)
+void Ice::use(ICharacter &target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
