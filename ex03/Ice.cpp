@@ -6,12 +6,11 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 08:59:32 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 18:38:32 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 18:39:37 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
-#include <iostream>
 
 Ice::Ice(void) : AMateria("ice") {}
 
