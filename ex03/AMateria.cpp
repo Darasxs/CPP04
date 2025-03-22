@@ -6,19 +6,15 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:26:16 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 15:56:11 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 17:50:36 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(void) : type("default")
-{
-}
+AMateria::AMateria(void) : type("default") {}
 
-AMateria::AMateria(std::string const &type) : type(type)
-{
-}
+AMateria::AMateria(std::string const &type) : type(type) {}
 
 AMateria::AMateria(AMateria const &copy)
 {
@@ -32,13 +28,11 @@ AMateria &AMateria::operator=(AMateria const &copy)
 	return (*this);
 }
 
-AMateria::~AMateria(void)
-{
-}
+AMateria::~AMateria(void) {}
 
-std::string const &getType(void) const
+std::string const &AMateria::getType(void) const
 {
-	return (this->type);
+	return type;
 }
 
 void AMateria::use(ICharacter &target)

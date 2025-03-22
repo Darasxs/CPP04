@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 09:44:36 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 15:56:27 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 17:53:29 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Character::Character(Character const &copy)
 
 Character &Character::operator=(Character const &copy)
 {
-				delete inventory[i];
+	delete inventory[i];
 
 	if (this != &copy)
 	{
@@ -57,7 +57,7 @@ Character &Character::operator=(Character const &copy)
 
 Character::~Character(void)
 {
-			delete inventory[i];
+	delete inventory[i];
 
 	for (int i = 0; i < 4; i++)
 	{

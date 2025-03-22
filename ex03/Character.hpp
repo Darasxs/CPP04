@@ -3,6 +3,7 @@
 
 # include "AMateria.hpp"
 # include "ICharacter.hpp"
+# include <string>
 
 class Character : public ICharacter
 {
@@ -12,7 +13,7 @@ class Character : public ICharacter
 
   public:
 	Character(void);
-	Character(std::string &name);
+	Character(const std::string &name);
 	Character(Character const &copy);
 	Character &operator=(Character const &copy);
 	~Character(void);
@@ -21,4 +22,6 @@ class Character : public ICharacter
 	void equip(AMateria *m);
 	void unequip(int idx);
 	void use(int idx, ICharacter &target);
-}
+};
+
+#endif

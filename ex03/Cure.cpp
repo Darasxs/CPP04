@@ -6,19 +6,15 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 09:13:23 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 15:56:33 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 17:31:57 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(void) : AMateria("cure")
-{
-}
+Cure::Cure(void) : AMateria("cure") {}
 
-Cure::Cure(Cure const &copy) : AMateria(copy)
-{
-}
+Cure::Cure(Cure const &copy) : AMateria(copy) {}
 
 Cure &Cure::operator=(Cure const &copy)
 {
@@ -27,9 +23,7 @@ Cure &Cure::operator=(Cure const &copy)
 	return (*this);
 }
 
-Cure::~Cure(void)
-{
-}
+Cure::~Cure(void) {}
 
 AMateria *Cure::clone(void) const
 {
