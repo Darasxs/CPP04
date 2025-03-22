@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 09:44:36 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 17:53:29 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/22 17:57:47 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,14 @@ Character::Character(void) : name("default")
 		inventory[i] = NULL;
 }
 
-Character::Character(std::string &name) : name(name)
+Character::Character(const std::string &name) : name(name)
 {
 	for (int i = 0; i < 4; i++)
 		inventory[i] = NULL;
 }
 
-Character::Character(Character const &copy)
+Character::Character(Character const &copy) : name(copy.name)
 {
-	name = copy.name;
 	for (int i = 0; i < 4; i++)
 	{
 		if (copy.inventory[i])
@@ -38,14 +37,15 @@ Character::Character(Character const &copy)
 
 Character &Character::operator=(Character const &copy)
 {
-	delete inventory[i];
-
 	if (this != &copy)
 	{
 		name = copy.name;
+
 		for (int i = 0; i < 4; i++)
 		{
 			if (inventory[i])
+				delete inventory[i];
+
 			if (copy.inventory[i])
 				inventory[i] = copy.inventory[i]->clone();
 			else
@@ -57,11 +57,10 @@ Character &Character::operator=(Character const &copy)
 
 Character::~Character(void)
 {
-	delete inventory[i];
-
 	for (int i = 0; i < 4; i++)
 	{
 		if (inventory[i])
+			delete inventory[i];
 	}
 }
 
@@ -73,13 +72,13 @@ std::string const &Character::getName(void) const
 void Character::equip(AMateria *m)
 {
 	if (!m)
-		return ;
+		return;
 	for (int i = 0; i < 4; i++)
 	{
 		if (!inventory[i])
 		{
 			inventory[i] = m;
-			break ;
+			break;
 		}
 	}
 }
