@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:26:36 by dpaluszk          #+#    #+#             */
-/*   Updated: 2025/03/04 16:54:46 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/22 15:55:25 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
 #include "Brain.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
 int	main(void)
 {
-	const Animal* animals[4];
-	for(int i = 0; i < 2; i++)
+	const Animal *animals[4];
+	for (int i = 0; i < 2; i++)
 		animals[i] = new Dog();
-	for(int i = 2; i < 4; i++)
+	for (int i = 2; i < 4; i++)
 		animals[i] = new Cat();
 	for (int i = 0; i < 4; i++)
 		delete animals[i];
 	std::cout << std::endl;
-	
-	const Cat* Marcin = new Cat();
-	const Dog* Kazik = new Dog();
+
+	const Cat *Marcin = new Cat();
+	const Dog *Kazik = new Dog();
 	std::cout << std::endl;
 
 	std::cout << "The brains should be empty at this point: " << std::endl;

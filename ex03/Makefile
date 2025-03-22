@@ -21,6 +21,9 @@ $(NAME): $(OBJ)
 	fi
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
+%.o: %.cpp
+	$(CC) $(FLAGS) -c $< -o $@
+
 clean:
 	rm -f $(OBJ)
 

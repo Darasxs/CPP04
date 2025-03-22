@@ -3,34 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 08:59:32 by daras             #+#    #+#             */
-/*   Updated: 2025/03/07 09:12:01 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/22 15:56:41 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice(void) : AMateria("ice") {}
-
-Ice::Ice(Ice const &copy) : AMateria(copy) {}
-
-Ice& Ice::operator=(Ice const &copy)
+Ice::Ice(void) : AMateria("ice")
 {
-    if (this != &copy)
-        AMateria::operator=(copy);
-    return (*this);
 }
 
-Ice::~Ice(void) {}
-
-AMateria* Ice::clone(void) const
+Ice::Ice(Ice const &copy) : AMateria(copy)
 {
-    return (new Ice(*this));
 }
 
-void use(ICharacter &target)
+Ice &Ice::operator=(Ice const &copy)
 {
-    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	if (this != &copy)
+		AMateria::operator=(copy);
+	return (*this);
+}
+
+Ice::~Ice(void)
+{
+}
+
+AMateria *Ice::clone(void) const
+{
+	return (new Ice(*this));
+}
+
+void	use(ICharacter &target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

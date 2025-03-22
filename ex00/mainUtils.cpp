@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mainUtils.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 08:12:13 by daras             #+#    #+#             */
-/*   Updated: 2025/03/04 08:18:12 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/22 16:21:41 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	properAnimalCall(void)
 	const Animal *Reks = new Dog();
 	const Animal *Borys = new Cat();
 	std::cout << std::endl;
-    std::cout << "meta is a " << meta->getType() << " " << std::endl;
+	std::cout << "meta is a " << meta->getType() << " " << std::endl;
 	std::cout << "Reks is a " << Reks->getType() << " " << std::endl;
 	std::cout << "Borys is a " << Borys->getType() << " " << std::endl;
 	Reks->makeSound(); 
@@ -35,18 +35,18 @@ void	properAnimalCall(void)
 	delete Borys;
 }
 
-void    wrongAnimalCall(void)
+void	wrongAnimalCall(void)
 {
-    const WrongAnimal *WrongMeta = new WrongAnimal();
-    const WrongCat *WrongBorys = new WrongCat();
-    
-    std::cout << std::endl;
-    std::cout << "WrongBorys is a " << WrongBorys->getType() << " " << std::endl;
-    std::cout << "WrongMeta is a " << WrongMeta->getType() << " " << std::endl;
-    WrongBorys->makeSound();
-    WrongMeta->makeSound();
-    
-    std::cout << std::endl;
-    delete WrongMeta;
-    delete WrongBorys;
+	const WrongAnimal *WrongMeta = new WrongAnimal();
+	const WrongCat *WrongBorys = new WrongCat();
+
+	std::cout << std::endl;
+	std::cout << "WrongBorys is a " << WrongBorys->getType() << " " << std::endl;
+	std::cout << "WrongMeta is a " << WrongMeta->getType() << " " << std::endl;
+	WrongBorys->makeSound();
+	WrongMeta->makeSound();
+
+	std::cout << std::endl;
+	delete WrongMeta;
+	delete WrongBorys;
 }

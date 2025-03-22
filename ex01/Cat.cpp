@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daras <daras@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:13:17 by dpaluszk          #+#    #+#             */
-/*   Updated: 2025/03/04 11:08:53 by daras            ###   ########.fr       */
+/*   Updated: 2025/03/22 15:55:14 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,44 @@
 
 Cat::Cat(void) : Animal("Cat")
 {
-    std::cout << "Default constructor for Cat called." << std::endl;
-    brain = new Brain();
+	std::cout << "Default constructor for Cat called." << std::endl;
+	brain = new Brain();
 }
 
 Cat::Cat(const Cat &cat) : Animal(cat)
 {
-    std::cout << "Copy constructor for Cat called." << std::endl;
-    brain = new Brain(*cat.getBrain());
-    *this = cat;
+	std::cout << "Copy constructor for Cat called." << std::endl;
+	brain = new Brain(*cat.getBrain());
+	*this = cat;
 }
 
 Cat &Cat::operator=(const Cat &cat)
 {
-    if(this != &cat)
-    {
-        Animal::operator=(cat);
-        if(brain)
-            delete brain;
-        brain = new Brain(*cat.getBrain());
-    }
-    std::cout << "Copy assignment operator for Cat called." << std::endl;
-    return (*this);
+			delete brain;
+
+	if (this != &cat)
+	{
+		Animal::operator=(cat);
+		if (brain)
+		brain = new Brain(*cat.getBrain());
+	}
+	std::cout << "Copy assignment operator for Cat called." << std::endl;
+	return (*this);
 }
 
 Cat::~Cat(void)
 {
-    delete brain;
-    std::cout << "Destructor for Cat called." << std::endl;
+	delete	brain;
+
+	std::cout << "Destructor for Cat called." << std::endl;
 }
 
 void Cat::makeSound(void) const
 {
-    std::cout << "Meow!" << std::endl;
+	std::cout << "Meow!" << std::endl;
 }
 
-Brain   *Cat::getBrain(void) const
+Brain *Cat::getBrain(void) const
 {
-    return (brain);
+	return (brain);
 }

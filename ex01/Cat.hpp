@@ -13,10 +13,10 @@ class Cat : public Animal
 	~Cat(void);
 
 	void makeSound(void) const override;
-	Brain* getBrain(void) const;
+	Brain *getBrain(void) const;
 
   private:
-	Brain* brain;
+	Brain *brain;
 };
 
 #endif
