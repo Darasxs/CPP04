@@ -6,7 +6,7 @@
 /*   By: dpaluszk <dpaluszk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:21:29 by daras             #+#    #+#             */
-/*   Updated: 2025/03/22 19:17:13 by dpaluszk         ###   ########.fr       */
+/*   Updated: 2025/03/23 02:30:30 by dpaluszk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,20 @@ int	main(void)
 	ICharacter *bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
+
+	std::cout << std::endl;
+
+	me->unequip(0);
+	me->use(0, *bob);
+	me->use(1, *bob);
+
+	std::cout << std::endl;
+
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	me->use(0, *bob);
+	me->use(1, *bob);
+
 	delete bob;
 	delete me;
 	delete src;
